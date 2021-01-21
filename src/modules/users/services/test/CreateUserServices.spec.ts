@@ -33,16 +33,16 @@ describe('CreateUsersService', () => {
   it('should not be able to create a new user with same email from another', async () => {
     await createUserService.execute({
       name: 'VUTTR',
-      email: 'test-email-duplicated@vuttr.com',
+      email: 'test@vuttr.com',
       password: '123456'
     })
 
-    await expect(
-      createUserService.execute({
-        name: 'VUTTR',
-        email: 'test-email-duplicated@vuttr.com',
-        password: '123456'
-      })
-    ).rejects.toBeInstanceOf(AppError)
+    const user_obj = {
+      name: 'VUTTR',
+      email: 'test@vuttr.com',
+      password: '123456'
+    }
+
+    await expect(createUserService.execute(user_obj)).rejects.toBeInstanceOf(AppError)
   })
 })

@@ -27,7 +27,7 @@ const production_config = [
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     entities: ['./dist/modules/**/infra/typeorm/entities/*.js'],
-    migrations: ['./dist/shared/infra/typeorrm/migrations/*.js'],
+    migrations: ['./dist/shared/infra/typeorm/migrations/*.js'],
     cli: {
       migrationsDir: './dist/shared/infra/typeorm/migrations'
     }

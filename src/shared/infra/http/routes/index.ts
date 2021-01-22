@@ -7,7 +7,9 @@ import userRoutes from '@modules/users/infra/http/routes/user.routes'
 const routes = Router()
 
 routes.use('/session', sessionRoutes)
+
 routes.use('/users', userRoutes)
+
 routes.use('/tools', toolsRoutes)
 
 export default routes

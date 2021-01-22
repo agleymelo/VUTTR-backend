@@ -19,7 +19,7 @@ export default class DeleteUserService {
     const user = await this.userRepository.findById(user_id)
 
     if (!user) {
-      throw new AppError('User not found!')
+      throw new AppError('User not found!', 401)
     }
 
     await this.userRepository.delete(user_id)

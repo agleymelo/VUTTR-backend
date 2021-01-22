@@ -41,14 +41,14 @@ export default class UpdateUserService {
     user.email = email
 
     if (password && !old_password) {
-      throw new AppError('You need to informed the old password to set a new password')
+      throw new AppError('You need to informed the old password to set a new password', 401)
     }
 
     if (password && old_password) {
       const checkPassword = await this.hashProvider.compareHash(old_password, user.password)
 
       if (!checkPassword) {
-        throw new AppError('Old Password does not match')
+        throw new AppError('Old Password does not match', 400)
       }
 
       user.password = await this.hashProvider.generateHash(password)

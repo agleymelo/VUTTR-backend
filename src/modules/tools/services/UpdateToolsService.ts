@@ -46,7 +46,7 @@ export default class UpdateToolsService {
       const toolExist = await this.toolsRepository.findByTitle(title, user_id)
 
       if (toolExist) {
-        throw new AppError(`${title} already exists`, 400)
+        throw new AppError(`${title} already exists`, 404)
       }
     }
 

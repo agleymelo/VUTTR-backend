@@ -10,6 +10,7 @@
       "protocol": "inspector",
       "restart": true,
       "name": "Debug",
+      "port": 9229,
       "skipFiles": ["<node_internals>/**"],
       "outFiles": ["${workspaceFolder}/**/*.ts"]
     }

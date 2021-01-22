@@ -29,7 +29,7 @@ const production_config = [
     entities: ['./dist/modules/**/infra/typeorm/entities/*.js'],
     migrations: ['./dist/shared/infra/typeorrm/migrations/*.js'],
     cli: {
-      migrationsDir: './dist/shared/infra/typeorm/migrrations'
+      migrationsDir: './dist/shared/infra/typeorm/migrations'
     }
   }
 ]

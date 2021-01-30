@@ -4,6 +4,8 @@ import 'dotenv/config'
 import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors'
 
+import cors from 'cors'
+
 import swaggerJSDoc, { Options } from 'swagger-jsdoc'
 import swaggerUI from 'swagger-ui-express'
 
@@ -21,6 +23,13 @@ const PORT = process.env.PORT || 3000
 app.disable('x-powered-by')
 
 app.use(express.json())
+
+app.use(
+  cors({
+    origin: process.env.URL_FRONTEND
+  })
+)
+
 app.use(errors())
 app.use(routes)
 

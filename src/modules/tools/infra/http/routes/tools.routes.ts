@@ -169,7 +169,7 @@ toolsRoutes.post(
       title: Joi.string().required(),
       link: Joi.string().required(),
       description: Joi.string().required(),
-      tags: Joi.array().required()
+      tags: Joi.array().items(Joi.string())
     }
   }),
   toolsController.store

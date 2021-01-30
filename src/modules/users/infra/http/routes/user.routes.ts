@@ -159,7 +159,6 @@ userRoutes.put(
       email: Joi.string().email().required(),
       old_password: Joi.string(),
       password: Joi.string(),
-      confirmed_password: Joi.string().valid(Joi.ref('password'))
     }
   }),
   userController.update

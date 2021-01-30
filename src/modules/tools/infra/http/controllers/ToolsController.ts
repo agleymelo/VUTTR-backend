@@ -17,9 +17,9 @@ export default class ToolsController {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { tag }: any = request.query
 
-    const tagFind = tag ? tag.toString() : undefined
+    // const tagFind = tag ? tag.toString() : undefined
 
-    const tools = await listToolsServices.execute({ user_id, tags: tagFind })
+    const tools = await listToolsServices.execute({ user_id, tags: tag })
 
     return response.status(200).json(classToClass(tools))
   }

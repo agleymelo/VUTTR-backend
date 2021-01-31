@@ -82,7 +82,7 @@ yarn build
 npm build
 ```
 
-## 🚀 Extra steps <a name = "extra_steeps"></a>
+## 🚀 Extra steps <a name = "extra_steps"></a>
 
 Create your own ".env" file based on ".env.example"
 

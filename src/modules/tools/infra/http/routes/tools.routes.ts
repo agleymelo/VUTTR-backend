@@ -72,16 +72,6 @@ toolsRoutes.use(ensureAuthenticate)
  */
 toolsRoutes.get('/', toolsController.index)
 
-toolsRoutes.get(
-  '/:tools_id',
-  celebrate({
-    [Segments.PARAMS]: {
-      tools_id: Joi.string().required()
-    }
-  }),
-  toolsController.show
-)
-
 /**
  * @swagger
  * paths:

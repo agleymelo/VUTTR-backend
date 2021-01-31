@@ -4,7 +4,6 @@ import { container } from 'tsyringe'
 
 import CreateToolsService from '@modules/tools/services/CreateToolsService'
 import DeleteToolsService from '@modules/tools/services/DeleteToolsService'
-import ShowToolsService from '@modules/tools/services/ShowToolsService'
 import UpdateToolsService from '@modules/tools/services/UpdateToolsService'
 import ListToolsServices from '@modules/tools/services/ListToolsServices'
 
@@ -20,18 +19,6 @@ export default class ToolsController {
     // const tagFind = tag ? tag.toString() : undefined
 
     const tools = await listToolsServices.execute({ user_id, tags: tag })
-
-    return response.status(200).json(classToClass(tools))
-  }
-
-  public async show(request: Request, response: Response): Promise<Response> {
-    const user_id = request.user.id
-
-    const { tools_id } = request.params
-
-    const showToolsService = container.resolve(ShowToolsService)
-
-    const tools = await showToolsService.execute({ user_id, tools_id })
 
     return response.status(200).json(classToClass(tools))
   }

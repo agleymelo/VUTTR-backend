@@ -96,18 +96,6 @@ yarn typeorm migration:run
 
 Visit the swagger documentation on http://localhost:3000/docs or https://vuttr-api-agley.herokuapp.com/docs
 
-## ❤️ Building
-
-Generate the production version
-
-```bash
-# yarn
-yarn build
-
-# Npm
-npm build
-```
-
 ## ✍️ Author <a name = "author"></a>
 
 👤 **Agleylson Melo**
@@ -119,4 +107,3 @@ npm build
 <p align="center">
   DONE WITH 💜
 </p>
-
